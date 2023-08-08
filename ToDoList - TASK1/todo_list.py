@@ -37,6 +37,7 @@ def edit_task():
         current_task = task_listbox.get(selected_index)
         task_entry.delete(0, tk.END)
         task_entry.insert(0, current_task)
+        task_listbox.itemconfig(tk.END, {'bg':'#FF9999'})
 
 def delete_task():
     selected_index = task_listbox.curselection()
